@@ -21,17 +21,18 @@
         <div id="world">
           <canvas id='rotatingGlobe' style='cursor: move;'></canvas>
         </div>
+<span class="ipaddress"></span>
+
       </div>
     </div>
 
-<div id="ip-address"></div>
-<script>
-$(document).ready(function() {
-	$.getJSON('https://jsonip.com?callback=?', function (data) {
-      $('#ip-address').text(data.ip);
-  });	
-});
+    <script type="text/javascript">
+    $.getJSON("http://jsonip.com", function (data) {
+      console.log(data.ip);
+      $(".ipaddress").text(data.ip);
+    });
 </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type='text/javascript' src='//d3js.org/d3.v3.min.js'></script>
     <script type='text/javascript' src='//d3js.org/topojson.v1.min.js'></script>
     <script type='text/javascript' src='planetaryjs.min.js'></script>
