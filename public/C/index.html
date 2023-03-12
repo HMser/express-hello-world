@@ -2,12 +2,10 @@
 <html>
   <head>
     <title>Website Counter</title>
-    <script defer src="index.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+     </head>
   <body>
-    <div>Website visit count:</div>
-    <div class="website-counter"></div>
-    <button id="reset">Reset</button>
-  </body>
+    <h1>This site has been visited <span id="visits"></span> times.</h1>
+  <script src="index.js" defer></script>
+  <script async src="https://api.countapi.xyz/hit/hmser.ml/visits?callback=cb"></script>
+</body>
 </html>
