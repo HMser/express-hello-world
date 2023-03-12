@@ -5,7 +5,11 @@
      </head>
   <body>
     <h1>This site has been visited <span id="visits"></span> times.</h1>
-  <script src="index.js" defer></script>
+  <script>
+function callbackName(response) {
+    document.getElementById('visits').innerText = response.value;
+}
+ </script>
   <script async src="https://api.countapi.xyz/hit/hmser.ml/visits?callback=cb"></script>
 </body>
 </html>
